@@ -12,8 +12,15 @@ interface ITodo{
     providedIn: 'root',
 })
 export class TodoService {
-    url = `${environment}/home`;
+    private baseUrl = `${environment.apiUrl}/todos`;
 
     constructor(private http: HttpClient) {}
-    
+
+    getTodos(): Observable<ITodo[]> {
+        return this.http.get<ITodo[]>(this.baseUrl);
+    }
+
+    addTodo(todo: ITodo): Observable<ITodo> {
+        return this.http.post<ITodo>(this.baseUrl, todo);
+    }
 }
