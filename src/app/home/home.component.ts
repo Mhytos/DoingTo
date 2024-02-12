@@ -15,7 +15,6 @@ import { HttpClientModule } from "@angular/common/http";
     <button (click)="addTodo()">Add Todo</button>
 </div>
     `,
-    
 })
 // default export cause this is a routed component
 export  class HomeComponent{
