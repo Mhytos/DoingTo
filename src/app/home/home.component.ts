@@ -16,8 +16,7 @@ import { HttpClientModule } from "@angular/common/http";
 </div>
     `,
 })
-// default export cause this is a routed component
-export  class HomeComponent{
+export default class HomeComponent{
     todoText = new FormControl('');
 
     constructor(private todoService: TodoService) {}
