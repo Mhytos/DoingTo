@@ -16,8 +16,8 @@ export class TodoFetchService {
 
     constructor(private http: HttpClient) {}
 
-   getTodos(): Observable<ITodo[]> {
-        return this.http.get<ITodo[]>(this.baseUrl);
+   getTodos(): Observable<ITodo> {
+        return this.http.get<ITodo>(this.baseUrl);
     } 
 
 }
